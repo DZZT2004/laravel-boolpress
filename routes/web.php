@@ -31,3 +31,8 @@ Route::middleware('auth')
         Route::resource('categories', 'CategoryController');
         Route::resource('tags', 'TagController');
     });
+
+
+Route::get('{any?}', function () {
+    return view('guest.home');
+})->where("any", ".*")->name('guest.home');
