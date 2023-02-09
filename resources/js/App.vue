@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>Guest View</h1>
-        <ol>
-            <li v-for="post in arrayPosts" :key="post.id">
-                {{ post.title }}
-                <p>{{ post.excerpt }}</p>
-            </li>
-        </ol>
+        <main>
+            <router-view :to="{name: 'home'}">
+                <div v-for="post in arrayPosts" :key="post.id" class="tile">
+
+                </div>
+            </router-view>
+        </main>
 
     </div>
 </template>
